@@ -1,128 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Web Developer Internship - Cognifyz Technologies</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f8fa;
-      color: #333;
-    }
-
-    header {
-      background-color: #004080;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    section {
-      margin-bottom: 2rem;
-    }
-
-    h2 {
-      color: #004080;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    .cta {
-      text-align: center;
-      margin: 2rem 0;
-    }
-
-    .cta a {
-      display: inline-block;
-      background-color: #0073e6;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-
-    .cta a:hover {
-      background-color: #005bb5;
-    }
-
-    footer {
-      background-color: #002244;
-      color: white;
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 600px) {
-      header, main, footer {
-        padding: 1rem;
-      }
-    }
-  </style>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header>
-    <h1>Web Developer Internship Opportunities at Cognifyz Technologies</h1>
-  </header>
-
-  <main>
-    <section>
-      <h2>About the Internship Program</h2>
-      <p>
-        Join Cognifyz Technologies for a dynamic 8-week remote internship designed to equip aspiring web developers with real-world experience. Learn, build, and grow under the guidance of seasoned professionals while contributing to meaningful projects.
-      </p>
-    </section>
-
-    <section>
-      <h2>Internship Highlights</h2>
-      <ul>
-        <li>💼 Real-world development projects</li>
-        <li>👨‍🏫 1:1 mentorship and feedback</li>
-        <li>🧰 Exposure to modern technologies</li>
-        <li>🤝 Collaborative learning environment</li>
-        <li>📜 Certificate of Completion</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Desired Qualifications</h2>
-      <ul>
-        <li>Basic knowledge of HTML, CSS, and JavaScript</li>
-        <li>Familiarity with React or Node.js (preferred)</li>
-        <li>Problem-solving and debugging skills</li>
-        <li>Strong communication and teamwork</li>
-        <li>Eagerness to learn and grow</li>
-      </ul>
-    </section>
-
-    <div class="cta">
-      <a href="#">Apply Now</a> or <a href="#">Learn More</a>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('+')">+</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('*')">*</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="appendToDisplay('/')">/</button>
+        </div>
     </div>
-  </main>
-
-  <footer>
-    <p>📧 Email: internships@cognifyztech.com</p>
-    <p>🌐 Website: <a href="http://www.cognifyztech.com" style="color: #fff; text-decoration: underline;">www.cognifyztech.com</a></p>
-    <p>📍 Pune, India</p>
-  </footer>
-
+    <script src="scripts.js"></script>
 </body>
 </html>
